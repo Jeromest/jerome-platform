@@ -1,1 +1,17 @@
-
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/platform?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    baseline-on-migrate: true
+    baseline-version: 20230221001
+logging:
+  level:
+    root: info
+  file:
+    name: logs/platform.log
+  logback:
+    rollingpolicy:
+      file-name-pattern: logs/platform-%d{yyyy-MM-dd}.%i.log
